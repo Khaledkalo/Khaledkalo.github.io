@@ -21,12 +21,10 @@
 				<nav class="navbar navbar-expand-lg">
 					<div class="container-fluid">
 						<a class="navbar-brand" href="index.html">KALO</a>
-
 						<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
 							aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
 							<span class="navbar-toggler-icon"></span>
 						</button>
-
 						<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
 							<div class="navbar-nav">
 								<a class="nav-link p-4" aria-current="page" href="index.html">Home</a>
@@ -46,6 +44,91 @@
 		<section class="navenkurdi">
 			<div class="container">
 				<h1>coming soon</h1>
+			</div>
+		</section>
+
+
+		<section class="csharp">
+			<div class="container">
+				<div style="padding-left: 15px;">
+					<h1>Some C# Code</h1>
+				</div>
+				<div class="accordion" id="accordionPanelsStayOpenExample">
+					<div class="accordion-item">
+						<h2 class="accordion-header" id="panelsStayOpen-headingOne">
+							<button class="accordion-button" type="button" data-bs-toggle="collapse"
+								data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+								aria-controls="panelsStayOpen-collapseOne">
+								CPU Usage
+							</button>
+						</h2>
+						<div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse"
+							aria-labelledby="panelsStayOpen-headingOne">
+							<div class="accordion-body">
+								<p>load current cpu in percentage</p>
+
+								<div class="codeBox">
+									<pre>
+<code>
+	static void Main(string[] args)	{<br>
+		<span>PerformanceCounter</span> cpuCounter1 = new PerformanceCounter("Processor", "% Processor Time", "_Total"); <br>
+		<span>PerformanceCounter</span> cpuCounter2 = new PerformanceCounter("Processor", "% Privileged Time", "_Total");  <br>
+		<span>PerformanceCounter</span> cpuCounter3 = new PerformanceCounter("Processor", "% User Time", "_Total"); <br>
+
+		while (true) <br>
+		{<br>
+			Console.WriteLine($" CPU_Processor Time  :\t  {cpuCounter1.NextValue()} %");<br>
+			Console.WriteLine($" CPU_Privileged Time :\t  {cpuCounter2.NextValue()} %");<br>
+			Console.WriteLine($" CPU_User Time       :\t  {cpuCounter3.NextValue()} %");<br>		
+			Console.WriteLine();<br>
+			Thread.Sleep(1000);<br>
+		}<br>
+	}
+</code>
+</pre>
+								</div>
+
+							</div>
+						</div>
+					</div>
+					<div class="accordion-item">
+						<h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+								data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
+								aria-controls="panelsStayOpen-collapseTwo">
+								Available Memory
+							</button>
+						</h2>
+						<div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse"
+							aria-labelledby="panelsStayOpen-headingTwo">
+							<div class="accordion-body">
+								<p>load current available memory in Megabytes - Important Memory Counters</p>
+
+								<div class="codeBox">
+									<pre>
+<code>
+	static void Main(string[] args)	{<br>
+  		<span>PerformanceCounter</span> ramCounter = new PerformanceCounter("Memory", "Available MBytes");<br>
+		<span>PerformanceCounter</span> privateBytes = new PerformanceCounter("Process", "Private Bytes", currentProcess);<br>
+		<span>PerformanceCounter</span> gen2Collections = new PerformanceCounter(".NET CLR Memory", "# Gen 2 Collections", currentProcess);<br>
+
+		while (true) <br>
+		{<br>
+			Console.WriteLine($" RAM_Available GBytes:\t  {ramCounter.NextValue()/1024} GB");<br>
+			Console.WriteLine($" private bytes       :\t  {privateBytes.NextValue()}");<br>
+			Console.WriteLine($" gen 2 collections   :\t  {gen2Collections.NextValue()}");<br>
+			Console.WriteLine();<br>
+			Thread.Sleep(1000);<br>
+		}<br>
+	}
+</code>
+</pre>
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 		</section>
 

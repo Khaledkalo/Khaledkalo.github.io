@@ -10966,10 +10966,38 @@ textarea.form-control-lg {
   !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/sass/style.scss ***!
   \**************************************************************************************************************/
 .navenkurdi {
-  height: 560px;
+  height: 250px;
   background-color: rgb(29, 146, 101);
   text-align: center;
   padding: 50px;
+}
+
+.csharp {
+  height: 100%;
+  padding: 50px;
+}
+.csharp .container button {
+  font-size: 28px;
+}
+.csharp .container .accordion-button {
+  background-color: transparent;
+  box-shadow: none;
+  color: black;
+}
+.csharp .container .accordion-item .codeBox {
+  border: 1px solid #3f8d3c;
+  margin: 40px;
+}
+.csharp .container .accordion-item .codeBox pre {
+  line-height: 12px;
+}
+.csharp .container .accordion-item .codeBox pre code {
+  color: black;
+  font-size: 16px;
+}
+.csharp .container .accordion-item .codeBox pre code span {
+  color: #3f8d3c !important;
+  font-weight: bold;
 }
 
 @font-face {
@@ -10978,7 +11006,7 @@ textarea.form-control-lg {
 }
 body {
   font-family: "cairo", "Cambria, Cochin, Georgia, Times, Times New Roman, serif" !important;
-  background-color: #000000;
+  background-color: #EEE;
   overflow-x: hidden;
   width: 100%;
 }
@@ -11291,8 +11319,36 @@ footer .copyright {
   !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/sass/other.scss ***!
   \**************************************************************************************************************/
 .navenkurdi {
-  height: 560px;
+  height: 250px;
   background-color: rgb(29, 146, 101);
   text-align: center;
   padding: 50px;
+}
+
+.csharp {
+  height: 100%;
+  padding: 50px;
+}
+.csharp .container button {
+  font-size: 28px;
+}
+.csharp .container .accordion-button {
+  background-color: transparent;
+  box-shadow: none;
+  color: black;
+}
+.csharp .container .accordion-item .codeBox {
+  border: 1px solid #3f8d3c;
+  margin: 40px;
+}
+.csharp .container .accordion-item .codeBox pre {
+  line-height: 12px;
+}
+.csharp .container .accordion-item .codeBox pre code {
+  color: black;
+  font-size: 16px;
+}
+.csharp .container .accordion-item .codeBox pre code span {
+  color: #3f8d3c !important;
+  font-weight: bold;
 }
