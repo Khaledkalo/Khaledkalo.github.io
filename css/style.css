@@ -10990,6 +10990,8 @@ textarea.form-control-lg {
 }
 .csharp .container .accordion-item .codeBox pre {
   line-height: 12px;
+  background-color: #E7E7E7;
+  margin-bottom: 0px;
 }
 .csharp .container .accordion-item .codeBox pre code {
   color: black;
@@ -11343,6 +11345,8 @@ footer .copyright {
 }
 .csharp .container .accordion-item .codeBox pre {
   line-height: 12px;
+  background-color: #E7E7E7;
+  margin-bottom: 0px;
 }
 .csharp .container .accordion-item .codeBox pre code {
   color: black;
