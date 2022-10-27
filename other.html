@@ -21,8 +21,9 @@
 				<nav class="navbar navbar-expand-lg">
 					<div class="container-fluid">
 						<a class="navbar-brand" href="index.html">KALO</a>
-						<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-							aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+						<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+							data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"
+							aria-expanded="false" aria-label="Toggle navigation">
 							<span class="navbar-toggler-icon"></span>
 						</button>
 						<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
@@ -39,17 +40,17 @@
 			</div>
 		</section>
 
-		<section class="navenkurdi">
+		<!-- <section class="navenkurdi">
 			<div class="container">
 				<h1>coming soon</h1>
 			</div>
-		</section>
+		</section> -->
 
 
 		<section class="csharp">
 			<div class="container">
 				<div style="padding-left: 15px;">
-					<h1>Some C# Code</h1>
+					<h1>C#</h1>
 				</div>
 				<!-- 1 -->
 				<div class="accordion" id="accordionPanelsStayOpenExample">
@@ -176,8 +177,8 @@
 </code>
 </pre>
 
-<p class="wpfTask">WPF</p>
-<pre>
+									<p class="wpfTask">WPF</p>
+									<pre>
 <code>
   &#60;Grid> <br>
 	  &#60;Grid.ColumnDefinitions><br>
@@ -223,36 +224,126 @@
 					</div>
 					<!-- End 3 -->
 				</div>
-
 			</div>
 		</section>
 
 
 
-		<footer>
+		<section class="javascript">
 			<div class="container">
-				<div class="row" id="footer">
-					<div class="col-4 address">
-						<h3 class="mt-5">Khaled Kalo</h3>
-						<h3>Saarbrücken</h3>
-						<h3>Germany</h3>
+				<div style="padding-left: 15px;">
+					<h1>JavaScript</h1>
+				</div>
+				<div class="accordion" id="accordionPanelsStayOpenExample">
+					<div class="accordion-item">
+						<h2 class="accordion-header" id="panelsStayOpen-headingOne1">
+							<button class="accordion-button" type="button" data-bs-toggle="collapse"
+								data-bs-target="#panelsStayOpen-collapseOne1" aria-expanded="true"
+								aria-controls="panelsStayOpen-collapseOne1">
+								Creating a clock
+							</button>
+						</h2>
+						<div id="panelsStayOpen-collapseOne1" class="accordion-collapse collapse"
+							aria-labelledby="panelsStayOpen-headingOne1">
+							<div class="accordion-body">
+								<div class="clock">
+									<span id="hours">00</span> :
+									<span id="minutes">00</span> :
+									<span id="seconds">00</span>
+								</div>
+
+
+								<div class="codeBox">
+									<pre>
+<code>
+  <span>HTML</span><hr>
+  &#60;div>
+    &#60;span id="hours">00&#60;/span> :
+    &#60;span id="minutes">00&#60;/span> :
+    &#60;span id="seconds">00&#60;/span>
+  &#60;/div> <br>
+
+ <span>JavaScript</span><hr>
+ function add_leading_zero(number) {
+    if (number < 10) {
+      return "0" + number.toString();
+    } else {
+      return number.toString();
+    }
+  }
+  
+  window.setInterval(function () {
+    var currentTime = new Date();
+    var hours = currentTime.getHours();
+    var minutes = currentTime.getMinutes();
+    var seconds = currentTime.getSeconds();
+  
+    document.getElementById("hours").innerHTML = add_leading_zero(hours);
+    document.getElementById("minutes").innerHTML = add_leading_zero(minutes);
+    document.getElementById("seconds").innerHTML = add_leading_zero(seconds);
+  }, 1000);
+</code>
+									</pre>
+								</div>
+							</div>
+						</div>
 					</div>
-					<div class="social-media-footer col-8">
-						<ul class="social-icons1">
-							<li><a href="https://www.linkedin.com/in/khaled-kalo/" target="_blank"> <i
-										class="fa-brands fa-linkedin"></i></a>
-							<li><a href="https://github.com/Khaledkalo" target="_blank"><i class="fa-brands fa-github"></i></a></li>
-						</ul>
-					</div>
-					<hr class="line2">
-					<div class="col-12 text-center">
-						<h4 class="copyright mt-2">
-							All rights reserved KALO <span id="date"></span> &copy;
-						</h4>
+
+					<!-- 2 -->
+					<div class="accordion-item">
+						<h2 class="accordion-header" id="panelsStayOpen-headingTwo1">
+							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+								data-bs-target="#panelsStayOpen-collapseTwo1" aria-expanded="false"
+								aria-controls="panelsStayOpen-collapseTwo1">
+								
+							</button>
+						</h2>
+						<div id="panelsStayOpen-collapseTwo1" class="accordion-collapse collapse"
+							aria-labelledby="panelsStayOpen-headingTwo1">
+							<div class="accordion-body">
+								<p> - </p>
+								<div class="codeBox">
+									<pre>
+										<code>
+
+										</code>
+									</pre>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
-		</footer>
+	</div>
+	</section>
+
+
+
+	<footer>
+		<div class="container">
+			<div class="row" id="footer">
+				<div class="col-4 address">
+					<h3 class="mt-5">Khaled Kalo</h3>
+					<h3>Saarbrücken</h3>
+					<h3>Germany</h3>
+				</div>
+				<div class="social-media-footer col-8">
+					<ul class="social-icons1">
+						<li><a href="https://www.linkedin.com/in/khaled-kalo/" target="_blank"> <i
+									class="fa-brands fa-linkedin"></i></a>
+						<li><a href="https://github.com/Khaledkalo" target="_blank"><i
+									class="fa-brands fa-github"></i></a></li>
+					</ul>
+				</div>
+				<hr class="line2">
+				<div class="col-12 text-center">
+					<h4 class="copyright mt-2">
+						All rights reserved KALO <span id="date"></span> &copy;
+					</h4>
+				</div>
+			</div>
+		</div>
+	</footer>
 	</div>
 	</div>
 </body>

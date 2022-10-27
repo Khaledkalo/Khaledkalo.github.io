@@ -10965,13 +10965,6 @@ textarea.form-control-lg {
 /*!**************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/sass/style.scss ***!
   \**************************************************************************************************************/
-.navenkurdi {
-  height: 250px;
-  background-color: rgb(29, 146, 101);
-  text-align: center;
-  padding: 50px;
-}
-
 .csharp {
   height: 100%;
   padding: 50px;
@@ -10986,7 +10979,7 @@ textarea.form-control-lg {
 }
 .csharp .container .accordion-item .codeBox {
   border: 1px solid #3f8d3c;
-  margin: 40px;
+  margin: 30px;
 }
 .csharp .container .accordion-item .codeBox pre {
   line-height: 12px;
@@ -11009,6 +11002,40 @@ textarea.form-control-lg {
   padding: 10px;
   margin: 0px;
   background-color: #ffffff;
+}
+
+.javascript {
+  height: 100%;
+  padding: 50px;
+}
+.javascript .container button {
+  font-size: 28px;
+}
+.javascript .container .accordion-button {
+  background-color: transparent;
+  box-shadow: none;
+  color: black;
+}
+.javascript .container .accordion-item .clock {
+  width: 200px;
+  padding: 10px;
+  margin-left: 50px;
+  background-color: #cbd4cb;
+  color: red;
+  font-size: 22px;
+}
+.javascript .container .accordion-item .codeBox {
+  border: 1px solid #3f8d3c;
+  margin: 30px;
+}
+.javascript .container .accordion-item .codeBox pre {
+  background-color: #E7E7E7;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding: 0px;
+}
+.javascript .container .accordion-item .codeBox span {
+  color: red;
 }
 
 @font-face {
@@ -11329,13 +11356,6 @@ footer .copyright {
 /*!**************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/sass/other.scss ***!
   \**************************************************************************************************************/
-.navenkurdi {
-  height: 250px;
-  background-color: rgb(29, 146, 101);
-  text-align: center;
-  padding: 50px;
-}
-
 .csharp {
   height: 100%;
   padding: 50px;
@@ -11350,7 +11370,7 @@ footer .copyright {
 }
 .csharp .container .accordion-item .codeBox {
   border: 1px solid #3f8d3c;
-  margin: 40px;
+  margin: 30px;
 }
 .csharp .container .accordion-item .codeBox pre {
   line-height: 12px;
@@ -11373,4 +11393,38 @@ footer .copyright {
   padding: 10px;
   margin: 0px;
   background-color: #ffffff;
+}
+
+.javascript {
+  height: 100%;
+  padding: 50px;
+}
+.javascript .container button {
+  font-size: 28px;
+}
+.javascript .container .accordion-button {
+  background-color: transparent;
+  box-shadow: none;
+  color: black;
+}
+.javascript .container .accordion-item .clock {
+  width: 200px;
+  padding: 10px;
+  margin-left: 50px;
+  background-color: #cbd4cb;
+  color: red;
+  font-size: 22px;
+}
+.javascript .container .accordion-item .codeBox {
+  border: 1px solid #3f8d3c;
+  margin: 30px;
+}
+.javascript .container .accordion-item .codeBox pre {
+  background-color: #E7E7E7;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding: 0px;
+}
+.javascript .container .accordion-item .codeBox span {
+  color: red;
 }
