@@ -28,18 +28,16 @@
 						<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
 							<div class="navbar-nav">
 								<a class="nav-link p-4" aria-current="page" href="index.html">Home</a>
-								<a class="nav-link p-4" href="#experince">Experince</a>
-								<a class="nav-link p-4" href="#projects">Projects</a>
-								<a class="nav-link p-4" href="#footer">Contact</a>
+								<a class="nav-link p-4" href="index.html#experince">Experince</a>
+								<a class="nav-link p-4" href="index.html#projects">Projects</a>
+								<a class="nav-link p-4" href="index.html#footer">Contact</a>
 								<a class="nav-link p-4 active" href="other.html">Other</a>
 							</div>
 						</div>
-
 					</div>
 				</nav>
 			</div>
 		</section>
-
 
 		<section class="navenkurdi">
 			<div class="container">
@@ -53,6 +51,7 @@
 				<div style="padding-left: 15px;">
 					<h1>Some C# Code</h1>
 				</div>
+				<!-- 1 -->
 				<div class="accordion" id="accordionPanelsStayOpenExample">
 					<div class="accordion-item">
 						<h2 class="accordion-header" id="panelsStayOpen-headingOne">
@@ -87,10 +86,10 @@
 </code>
 </pre>
 								</div>
-
 							</div>
 						</div>
 					</div>
+					<!-- 2 -->
 					<div class="accordion-item">
 						<h2 class="accordion-header" id="panelsStayOpen-headingTwo">
 							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
@@ -124,11 +123,107 @@
 </code>
 </pre>
 								</div>
-
 							</div>
 						</div>
 					</div>
+
+					<!-- 3 -->
+					<div class="accordion-item">
+						<h2 class="accordion-header" id="panelsStayOpen-headingThree">
+							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+								data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
+								aria-controls="panelsStayOpen-collapseThree">
+								Show RAM and CPU usage in UI (C# & WPF)
+							</button>
+						</h2>
+						<div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse"
+							aria-labelledby="panelsStayOpen-headingThree">
+							<div class="accordion-body">
+								<div class="codeBox">
+									<pre>
+<code>
+
+  public partial class MainWindow : Window <br>
+    { <br>
+	<span>PerformanceCounter</span> ramCounter = new PerformanceCounter("Memory", "Available MBytes");<br>
+	<span>PerformanceCounter</span> cpuCounter = new PerformanceCounter("Processor", "% Processor Time", "_Total"); <br>
+
+        public MainWindow()<br>
+        {
+            InitializeComponent();<br>
+
+            System.Windows.Threading.DispatcherTimer dispatcherTimer1 = new System.Windows.Threading.DispatcherTimer();<br>
+            dispatcherTimer1.Interval = TimeSpan.FromSeconds(1);<br>
+            dispatcherTimer1.Tick += timer_Tick;<br>
+            dispatcherTimer1.Start();<br>
+        }<br>
+
+        private void <span class="timer_t"> timer_Tick</span>(object sender, EventArgs e)<br>
+        {
+            txtboxRam.Text = (ramCounter.NextValue() / 1024).ToString("F");<br>
+            txtboxCpu.Text = cpuCounter.NextValue().ToString();<br>
+
+            if ((ramCounter.NextValue() / 1024) < 6)<br>
+            {<br>
+                txtboxRam.Background = Brushes.Red;<br>
+            }<br>
+            else<br>
+            {<br>
+                txtboxRam.Background = Brushes.White;<br>
+            }<br>
+        }<br>
+    }
+</code>
+</pre>
+
+<p class="wpfTask">WPF</p>
+<pre>
+<code>
+  &#60;Grid> <br>
+	  &#60;Grid.ColumnDefinitions><br>
+	     &#60;ColumnDefinition/><br>
+	   &#60;/Grid.ColumnDefinitions><br>
+	   &#60;Grid.RowDefinitions><br>
+	   	  &#60;RowDefinition Height="100"/><br>
+	      &#60;RowDefinition Height="Auto"/><br>
+	   &#60;/Grid.RowDefinitions><br>
+
+	   &#60;StackPanel Grid.Row="0" Background="AliceBlue"> <br>
+	     &#60;TextBlock Text="RAM &amp; CPU Usage" Margin="15 40 0 0" FontSize="18" FontWeight="Bold" /> <br>
+	   &#60;/StackPanel><br>
+
+	&#60;Grid Grid.Row="1" Margin="15"><br>
+	    &#60;Grid.ColumnDefinitions><br>
+	      &#60;ColumnDefinition Width="160"/><br>
+	      &#60;ColumnDefinition Width="160"/><br>
+	      &#60;ColumnDefinition Width="100"/><br>
+	    &#60;/Grid.ColumnDefinitions><br>
+	    &#60;Grid.RowDefinitions><br>
+	      &#60;RowDefinition/><br>
+	      &#60;RowDefinition/><br>
+	      &#60;RowDefinition/><br>
+	    &#60;/Grid.RowDefinitions><br>
+
+	   &#60;Label Content="Available Memory" Margin="0 13" FontSize="18" Grid.Row="0" HorizontalAlignment="Center"/><br>
+	   &#60;Label Content="CPU" Margin="0 13" FontSize="18" Grid.Row="1" HorizontalAlignment="Center"/><br>
+
+	   &#60;TextBox x:Name="txtboxRam" Grid.Row="0" Grid.Column="1" Height="30"  FontSize="20" VerticalContentAlignment="Center"/><br>
+	   &#60;TextBox x:Name="txtboxCpu" Grid.Row="1" Grid.Column="1" Height="30"  FontSize="20" VerticalContentAlignment="Center"/><br>
+
+	   &#60;Label Content="Gegabytes" Margin="0 13" FontSize="16" Grid.Row="0" Grid.Column="2"/><br>
+	   &#60;Label Content="%" Margin="0 13" FontSize="16" Grid.Row="1" Grid.Column="2"/><br>
+	&#60;/Grid><br>
+  &#60;/Grid><br>
+
+</code>
+</pre>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- End 3 -->
 				</div>
+
 			</div>
 		</section>
 

@@ -11001,6 +11001,15 @@ textarea.form-control-lg {
   color: #3f8d3c !important;
   font-weight: bold;
 }
+.csharp .container .accordion-item .codeBox pre code .timer_t {
+  color: #3d3c8d !important;
+  font-weight: bold;
+}
+.csharp .container .accordion-item .codeBox .wpfTask {
+  padding: 10px;
+  margin: 0px;
+  background-color: #ffffff;
+}
 
 @font-face {
   font-family: "cairo";
@@ -11355,4 +11364,13 @@ footer .copyright {
 .csharp .container .accordion-item .codeBox pre code span {
   color: #3f8d3c !important;
   font-weight: bold;
+}
+.csharp .container .accordion-item .codeBox pre code .timer_t {
+  color: #3d3c8d !important;
+  font-weight: bold;
+}
+.csharp .container .accordion-item .codeBox .wpfTask {
+  padding: 10px;
+  margin: 0px;
+  background-color: #ffffff;
 }
