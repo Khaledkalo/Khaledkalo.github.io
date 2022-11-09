@@ -11056,9 +11056,6 @@ body {
 .container-fluid {
   padding-right: 0px;
   padding-left: 0px;
-  margin-left: 0px;
-  margin-right: 0px;
-  overflow: hidden;
 }
 
 .top-menu {
@@ -11101,6 +11098,7 @@ body {
 }
 .content h1 {
   font-size: 3.1rem;
+  font-weight: 700;
   color: #FF5733;
 }
 .content .line1 {
