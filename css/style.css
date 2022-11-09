@@ -11049,14 +11049,16 @@ textarea.form-control-lg {
 }
 body {
   font-family: "cairo", "Cambria, Cochin, Georgia, Times, Times New Roman, serif" !important;
-  background-color: #EEE;
   overflow-x: hidden;
   width: 100%;
 }
 
 .container-fluid {
-  padding-right: 0px !important;
-  padding-left: 0px !important;
+  padding-right: 0px;
+  padding-left: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  overflow: hidden;
 }
 
 .top-menu {
@@ -11307,8 +11309,14 @@ footer .copyright {
   }
 }
 @media (max-width: 767px) {
-  .experince .technos {
+  .experince .container {
+    width: 70%;
+  }
+  .experince .container .technos {
     margin-left: 50px !important;
+  }
+  .projects .container {
+    width: 70%;
   }
 }
 @media (max-width: 575px) {
@@ -11322,6 +11330,9 @@ footer .copyright {
   .experince {
     padding: 20px;
   }
+  .experince .container {
+    width: 70%;
+  }
   .experince .container .col1 {
     display: inline-block;
     width: 50%;
@@ -11332,8 +11343,17 @@ footer .copyright {
   .projects {
     padding: 20px;
   }
+  .projects .container {
+    width: 70%;
+  }
 }
 @media (max-width: 465px) {
+  .experince .container {
+    width: 70%;
+  }
+  .projects .container {
+    width: 70%;
+  }
   footer h3 {
     font-size: 1.3rem;
   }
@@ -11345,6 +11365,9 @@ footer .copyright {
   .content p {
     font-size: 1rem;
   }
+  .experince .container {
+    width: 70%;
+  }
   .experince .container .col1 .technos {
     margin-left: 2px !important;
     margin: 0px;
@@ -11354,6 +11377,9 @@ footer .copyright {
   }
   .experince .container .col1 .technos p {
     font-size: 15px;
+  }
+  .projects .container {
+    width: 70%;
   }
   footer h3 {
     font-size: 1rem;
