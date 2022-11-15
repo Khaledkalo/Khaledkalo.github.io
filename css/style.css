@@ -10990,6 +10990,10 @@ textarea.form-control-lg {
   color: black;
   font-size: 16px;
 }
+.csharp .container .accordion-item .codeBox pre code .main {
+  color: blue !important;
+  font-weight: bold;
+}
 .csharp .container .accordion-item .codeBox pre code span {
   color: #3f8d3c !important;
   font-weight: bold;
@@ -11413,6 +11417,10 @@ footer .copyright {
 .csharp .container .accordion-item .codeBox pre code {
   color: black;
   font-size: 16px;
+}
+.csharp .container .accordion-item .codeBox pre code .main {
+  color: blue !important;
+  font-weight: bold;
 }
 .csharp .container .accordion-item .codeBox pre code span {
   color: #3f8d3c !important;
