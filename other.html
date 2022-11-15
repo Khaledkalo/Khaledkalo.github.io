@@ -21,9 +21,8 @@
 				<nav class="navbar navbar-expand-lg">
 					<div class="container-fluid">
 						<a class="navbar-brand" href="index.html">KALO</a>
-						<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-							data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"
-							aria-expanded="false" aria-label="Toggle navigation">
+						<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+							aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
 							<span class="navbar-toggler-icon"></span>
 						</button>
 						<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
@@ -224,7 +223,72 @@
 					</div>
 					<!-- End 3 -->
 				</div>
-			</div>
+
+
+				<!-- 4 -->
+				<div class="accordion" id="accordionPanelsStayOpenExample">
+					<div class="accordion-item">
+						<h2 class="accordion-header" id="panelsStayOpen-headingFour">
+							<button class="accordion-button" type="button" data-bs-toggle="collapse"
+								data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="true"
+								aria-controls="panelsStayOpen-collapseFour">
+								Exception Handling
+							</button>
+						</h2>
+						<div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse"
+							aria-labelledby="panelsStayOpen-headingFour">
+							<div class="accordion-body">
+								<p>Some Exeptions types </p>
+								<ul>
+									<li>DivideByZeroException</li>
+									<li>OverflowException</li>
+									<li>FormatException</li>
+									<li>FileNotFoundException</li>
+									<li>DirectoryNotFoundException</li>
+									<li>ArgumentNullException</li>
+								</ul>
+
+								<div class="codeBox">
+									<pre>
+<code>
+  static void Main(string[] args) {<br>
+    try
+ 	{
+		Console.Write("Enter First Number: ");
+		int Numerator = Convert.ToInt32(Console.ReadLine());
+
+		Console.Write("Enter Second Number: ");
+		int Denominator = Convert.ToInt32(Console.ReadLine());
+
+		int Result = Numerator / Denominator;
+		Console.WriteLine("Result = {0}", Result);
+	}<br>
+	catch (DivideByZeroException)
+	{
+		Console.WriteLine("DivideByZeroException: Denominator cannot be zero");
+	}<br>
+	catch (FormatException)
+	{
+		Console.WriteLine("FormatException: Please enter a number");
+	}<br>
+	catch (OverflowException)
+	{
+		Console.WriteLine($"OverflowException: only number {Int32.MinValue} && {Int32.MaxValue} are allowed");
+	}<br>
+	catch (Exception ex)
+	{
+		Console.WriteLine(ex.Message);
+	}
+  }
+</code>
+</pre>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- End 5 -->
+
+				</div>
 		</section>
 
 		<section class="javascript">
@@ -329,8 +393,7 @@
 					<ul class="social-icons1">
 						<li><a href="https://www.linkedin.com/in/khaled-kalo/" target="_blank"> <i
 									class="fa-brands fa-linkedin"></i></a>
-						<li><a href="https://github.com/Khaledkalo" target="_blank"><i
-									class="fa-brands fa-github"></i></a></li>
+						<li><a href="https://github.com/Khaledkalo" target="_blank"><i class="fa-brands fa-github"></i></a></li>
 					</ul>
 				</div>
 				<hr class="line2">
